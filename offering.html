@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		body {font-family: Arial, Helvetica, sans-serif;}
+		* {box-sizing: border-box;}
+		
+		input[type=text], select, textarea {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical;
+		}
+		
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+		
+		.container {
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+<img src="logo2.png" alt="" height="25%" width="100%">
+<span class="menuB" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; </span>
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a href="index.html">Home </a>
+	<a href="df.php">Discussion Forum</a>
+	<a href="Booking.php">Booking a Shelter</a>
+	<a href="SAC.php">Submitting a case</a>
+	<a href="FAQ.php">FAQ</a>
+	<a href="http://abolish153.org/">About Abolish 153</a>
+	<a href="http://abolish153.org/contact-us/">Contact Abolish 153</a>
+
+
+</div>
+	<div class="container">
+		<form method="post" action="insert_offer.php">
+			<h3>UserID</h3>
+			<label for="fname">Start Date</label>
+			<input type="date" id="fname" name="start_date">
+			
+			<label for="lname">End Date</label>
+			<input type="date" id="lname" name="end_date">
+			
+			<label for="country">Location URL</label>
+			<input type="url" id="country" name="location_url">
+			
+			
+			<p><label for="text_l">Address</label>
+			<input type="text" id="text_l" name="location_text">
+			</p>
+			
+			<p>
+				<label>Fits How many people?
+					<input type="number" name="fits">
+				</label>
+			</p>
+			
+			<p><button type="Submit">Offer Shelter</button></p>
+		</form>
+	</div>
+
+
+
+<script>
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "300px";
+	}
+	
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	}
+</script>
+
+</body>
+
+</html>
